@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.square {
+  width: 87.5px; /* 35px * 2.5 */
+  height: 87.5px; /* 35px * 2.5 */
+  border: 1px solid black;
+  background-color: white;
+  font-size: 3rem; /* 1.2rem * 2.5 */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 87.5px);
+  grid-template-rows: repeat(3, 87.5px);
+  gap: 2px;
+  background-color: black;
+  padding: 5px;
+}
+
+.status {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
