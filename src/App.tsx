@@ -71,6 +71,11 @@ const Board: React.FC = () => {
     setIsXNext(!isXNext);
   };
 
+  const resetGame = () => {
+    setSquares(Array(9).fill(null));
+    setIsXNext(true);
+  };
+
   const winner = calculateWinner(squares);
   const currentPlayer = isXNext ? playerX : playerO;
   const status = winner
@@ -85,6 +90,9 @@ const Board: React.FC = () => {
           <Square key={i} value={value} onSquareClick={() => handleClick(i)} />
         ))}
       </div>
+      <button onClick={resetGame} className="reset-button">
+        Mulai Ulang
+      </button>
     </>
   );
 };
